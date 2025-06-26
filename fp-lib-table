@@ -4,4 +4,5 @@
   (lib (name "MX")(type "KiCad")(uri "${KIPRJMOD}/MX_V2/MX_Solderable.pretty")(options "")(descr ""))
   (lib (name "MX LED")(type "KiCad")(uri "${KIPRJMOD}/MX_V2/Switch_Misc.pretty")(options "")(descr ""))
   (lib (name "OLED")(type "KiCad")(uri "${KIPRJMOD}/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty")(options "")(descr ""))
+  (lib (name "Keyboard Parts")(type "KiCad")(uri "${KIPRJMOD}/kicad-keyboard-parts.pretty")(options "")(descr ""))
 )

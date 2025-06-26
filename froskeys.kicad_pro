@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|144780000|65937500|b17d5b38-8750-486b-8325-f73a4394976a|00000000-0000-0000-0000-000000000000",
+          "I deleted the silkscreen (it goes outside the board)"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -487,6 +492,13 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3
       }
     ],
     "meta": {
