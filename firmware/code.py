@@ -1,3 +1,5 @@
+"""KMK firmware for Froskeys."""
+
 import board
 from kmk.extensions.media_keys import MediaKeys
 from kmk.extensions.RGB import RGB
