@@ -1,15 +1,15 @@
-[submodule "MX_V2"]
-	path = MX_V2
-	url = https://github.com/ai03-2725/MX_V2
-[submodule "OPL_Kicad_Library"]
-	path = OPL_Kicad_Library
-	url = https://github.com/Seeed-Studio/OPL_Kicad_Library/
-[submodule "KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty"]
-	path = KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty
-	url = https://github.com/gorbachev/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty
-[submodule "Keebio-Parts.pretty"]
-	path = Keebio-Parts.pretty
-	url = https://github.com/keebio/Keebio-Parts.pretty
-[submodule "kicad-keyboard-parts.pretty"]
-	path = kicad-keyboard-parts.pretty
+[submodule "firmware/kmk_firmware"]
+	path = firmware/kmk_firmware
+	url = https://github.com/KMKfw/kmk_firmware
+[submodule "pcb/kicad-keyboard-parts.pretty"]
+	path = pcb/kicad-keyboard-parts.pretty
 	url = https://github.com/ebastler/kicad-keyboard-parts.pretty
+[submodule "pcb/MX_V2"]
+	path = pcb/MX_V2
+	url = https://github.com/ai03-2725/MX_V2
+[submodule "pcb/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty"]
+	path = pcb/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty
+	url = https://github.com/gorbachev/KiCad-SSD1306-0.91-OLED-4pin-128x32.pretty
+[submodule "pcb/OPL_Kicad_Library"]
+	path = pcb/OPL_Kicad_Library
+	url = https://github.com/Seeed-Studio/OPL_Kicad_Library
