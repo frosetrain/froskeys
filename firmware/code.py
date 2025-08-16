@@ -1,7 +1,9 @@
 """KMK firmware for Froskeys."""
 
 import board
+import busio as io
 from kmk.extensions.media_keys import MediaKeys
+from kmk.extensions.oled_1306 import BitmapLogoScene, Display, KeypressesScene, StatusScene
 from kmk.extensions.RGB import RGB
 from kmk.keys import KC, make_key
 from kmk.kmk_keyboard import KMKKeyboard
@@ -15,6 +17,16 @@ keyboard = KMKKeyboard()
 combos = Combos()
 encoder = EncoderHandler()
 rgb = RGB(pixel_pin=board.GP0, num_pixels=9, val_default=64, val_limit=64)
+oled_i2c = io.I2C(sda=board.GP6, scl=board.GP7, frequency=400_000)
+oled_layers = ["Normal", "Brightness"]
+oled_scenes = [
+    BitmapLogoScene("/canvas_raw.bmp"),
+    KeypressesScene(matrix_width=3, matrix_height=3, split=False),
+    StatusScene(layers_names=oled_layers, separate_default_layer=True),
+]
+oled = Display(oled_i2c, oled_scenes, rotation=180)
+keyboard.extensions.append(oled)
+
 keyboard.modules = [Macros()]
 keyboard.extensions = [MediaKeys(), Macros(), Layers(), combos, encoder]
 
