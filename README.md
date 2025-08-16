@@ -46,7 +46,7 @@ Section analysis was a very useful feature
 -   1 × small-screen
 -   9 × keycap-white
 
-## Custom components
+### Custom components
 
 -   9 × SK6812 MINI-E LED
 -   4 × M3×16mm screw
