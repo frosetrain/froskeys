@@ -2,9 +2,11 @@
 
 import board
 import busio as io
-from kmk.extensions.media_keys import MediaKeys
-from kmk.extensions.oled_1306 import BitmapLogoScene, Display, KeypressesScene, StatusScene
 from kmk.extensions.RGB import RGB
+
+from kmk.extensions.display import Display, ImageEntry, TextEntry
+from kmk.extensions.display.ssd1306 import SSD1306
+from kmk.extensions.media_keys import MediaKeys
 from kmk.keys import KC, make_key
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.modules.combos import Chord, Combos
@@ -18,17 +20,20 @@ combos = Combos()
 encoder = EncoderHandler()
 rgb = RGB(pixel_pin=board.GP0, num_pixels=9, val_default=64, val_limit=64)
 oled_i2c = io.I2C(sda=board.GP6, scl=board.GP7, frequency=400_000)
-oled_layers = ["Normal", "Brightness"]
-oled_scenes = [
-    BitmapLogoScene("/canvas_raw.bmp"),
-    KeypressesScene(matrix_width=3, matrix_height=3, split=False),
-    StatusScene(layers_names=oled_layers, separate_default_layer=True),
-]
-oled = Display(oled_i2c, oled_scenes, rotation=180)
-keyboard.extensions.append(oled)
+oled_display = Display(
+    display=SSD1306(oled_i2c),
+    width=128,
+    height=32,
+    flip=True,
+    entries=[
+        # ImageEntry(0, 0, "sierra.bmp"),
+        TextEntry("Froskeys is real", 0, 0),
+        TextEntry("Froskeys is fake", 0, 16),
+    ],
+)
 
 keyboard.modules = [Macros()]
-keyboard.extensions = [MediaKeys(), Macros(), Layers(), combos, encoder]
+keyboard.extensions = [MediaKeys(), Macros(), Layers(), combos, encoder, oled_display]
 
 make_key(
     names=("MYKEY",),
@@ -36,7 +41,7 @@ make_key(
 )
 
 combos.combos = [Chord((0, 1), KC.MYKEY, match_coord=True)]
-encoder.pins = ((board.GP1, board.GP29, None),)
+encoder.pins = ((board.GP1, board.GP15, None),)  # GP29
 encoder.map = [
     ((KC.AUDIO_VOL_DOWN, KC.AUDIO_VOL_UP, KC.NO)),
     ((KC.BRIGHTNESS_DOWN, KC.BRIGHTNESS_UP, KC.NO)),

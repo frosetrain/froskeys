@@ -38,16 +38,21 @@ Section analysis was a very useful feature
 
 ## BOM
 
-### From inventory
+### JLCPCB
 
--   1 × XIAO-RP2040
--   9 × diode
--   1 × encoder
--   1 × small-screen
--   9 × keycap-white
+-   PCB
 
-### Custom components
+### Automatica’s 3D Printer
 
+-   Case
+
+### Aliexpress (S$21.25)
+
+-   1 × Seeed Studio XIAO RP2040
+-   9 × 1N4148 Diode
+-   1 × EC11 Rotary Encoder
+-   1 × 0.91″ I²C OLED Display
+-   9 × White XDA Profile PBT Keycaps
 -   9 × SK6812 MINI-E LED
 -   4 × M3×16mm screw
 -   4 × M3×5mm×4mm heatset insert
