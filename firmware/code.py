@@ -44,7 +44,7 @@ keyboard.modules = [Macros()]
 keyboard.extensions = [MediaKeys(), Macros(), Layers(), combos, encoder, oled_display]
 
 # Set encoder parameters
-encoder.pins = ((board.D7, board.D3, None),)
+encoder.pins = ((board.D3, board.D7, None),)
 encoder.map = [
     ((KC.AUDIO_VOL_DOWN, KC.AUDIO_VOL_UP, KC.NO),),
     ((KC.BRIGHTNESS_DOWN, KC.BRIGHTNESS_UP, KC.NO),),
