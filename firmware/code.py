@@ -15,8 +15,9 @@ from kmk.modules.layers import Layers
 from kmk.modules.macros import Delay, Macros, Press, Release, Tap
 from kmk.scanners import DiodeOrientation
 
+# Initialise keyboard hardware, modules and extensions
 keyboard = KMKKeyboard()
-combos = Combos()
+combos = Combos([Chord((0, 1), KC.MYKEY, match_coord=True)])
 encoder = EncoderHandler()
 rgb = RGB(pixel_pin=board.GP0, num_pixels=9, val_default=64, val_limit=64)
 oled_i2c = io.I2C(sda=board.GP6, scl=board.GP7, frequency=400_000)
@@ -32,25 +33,24 @@ oled_display = Display(
     ],
 )
 
+# Load modules and extensions
 keyboard.modules = [Macros()]
 keyboard.extensions = [MediaKeys(), Macros(), Layers(), combos, encoder, oled_display]
 
+# What is this for
 make_key(
     names=("MYKEY",),
     on_press=lambda *args: print("I pressed MYKEY"),
 )
 
-combos.combos = [Chord((0, 1), KC.MYKEY, match_coord=True)]
+# Set encoder parameters
 encoder.pins = ((board.GP1, board.GP15, None),)  # GP29
 encoder.map = [
-    ((KC.AUDIO_VOL_DOWN, KC.AUDIO_VOL_UP, KC.NO)),
-    ((KC.BRIGHTNESS_DOWN, KC.BRIGHTNESS_UP, KC.NO)),
+    ((KC.AUDIO_VOL_DOWN, KC.AUDIO_VOL_UP, KC.NO),),
+    ((KC.BRIGHTNESS_DOWN, KC.BRIGHTNESS_UP, KC.NO),),
 ]
 
-keyboard.col_pins = (board.GP26, board.GP27, board.GP28)
-keyboard.row_pins = (board.GP3, board.GP4, board.GP2)
-keyboard.diode_orientation = DiodeOrientation.COL2ROW
-
+# Funny macro
 PACMAN_SYU = KC.MACRO(
     Press(KC.LGUI),
     Tap(KC.T),
@@ -60,6 +60,10 @@ PACMAN_SYU = KC.MACRO(
     Tap(KC.ENTER),
 )
 
+# Set keyboard parameters
+keyboard.col_pins = (board.GP26, board.GP27, board.GP28)
+keyboard.row_pins = (board.GP3, board.GP4, board.GP2)
+keyboard.diode_orientation = DiodeOrientation.COL2ROW
 keyboard.keymap = [
     [
         KC.LCTL(KC.Z),
