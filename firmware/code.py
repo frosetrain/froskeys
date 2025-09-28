@@ -2,11 +2,10 @@
 
 import board
 import busio as io
-from kmk.extensions.RGB import RGB
-
-from kmk.extensions.display import Display, ImageEntry, TextEntry
+from kmk.extensions.display import Display, TextEntry
 from kmk.extensions.display.ssd1306 import SSD1306
 from kmk.extensions.media_keys import MediaKeys
+from kmk.extensions.RGB import RGB
 from kmk.keys import KC, make_key
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.modules.combos import Chord, Combos
