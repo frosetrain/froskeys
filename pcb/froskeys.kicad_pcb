@@ -82,6 +82,7 @@
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
+		(grid_origin 95.25 71.4375)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -11211,11 +11212,11 @@
 	(dimension
 		(type orthogonal)
 		(layer "Cmts.User")
-		(uuid "091f0165-d36e-443c-8cf3-ebb53fd8e30c")
+		(uuid "411b5567-545e-4f8f-918a-3f338bbf66c7")
 		(pts
-			(xy 176.2125 130.96875) (xy 163.9824 130.5814)
+			(xy 176.212749 138.1125) (xy 169.013 136.866991)
 		)
-		(height 13.81125)
+		(height -0.762269)
 		(orientation 0)
 		(format
 			(prefix "")
@@ -11234,10 +11235,10 @@
 			(extension_offset 0.5)
 			(keep_text_aligned yes)
 		)
-		(gr_text "12.2301"
-			(at 170.09745 143.63 0)
+		(gr_text "7.1997"
+			(at 172.612874 136.200231 0)
 			(layer "Cmts.User")
-			(uuid "091f0165-d36e-443c-8cf3-ebb53fd8e30c")
+			(uuid "411b5567-545e-4f8f-918a-3f338bbf66c7")
 			(effects
 				(font
 					(size 1 1)
@@ -11287,11 +11288,11 @@
 	(dimension
 		(type orthogonal)
 		(layer "Cmts.User")
-		(uuid "b6ea45d8-f9f1-462b-a35a-4dc8be0646c8")
+		(uuid "50e9c856-fb86-4103-b833-217375212106")
 		(pts
-			(xy 155.321 140.716) (xy 155.321 128.778)
+			(xy 134.513 128.747) (xy 134.513 140.747)
 		)
-		(height 0.508)
+		(height 0)
 		(orientation 1)
 		(format
 			(prefix "")
@@ -11310,10 +11311,48 @@
 			(extension_offset 0.5)
 			(keep_text_aligned yes)
 		)
-		(gr_text "11.938"
-			(at 154.679 134.747 90)
+		(gr_text "12"
+			(at 133.363 134.747 90)
 			(layer "Cmts.User")
-			(uuid "b6ea45d8-f9f1-462b-a35a-4dc8be0646c8")
+			(uuid "50e9c856-fb86-4103-b833-217375212106")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Cmts.User")
+		(uuid "6a5cb686-9b6c-43c9-9276-58d9cbeb9d47")
+		(pts
+			(xy 169.013 140.747) (xy 131.013 140.747)
+		)
+		(height 0)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "38"
+			(at 150.013 139.597 0)
+			(layer "Cmts.User")
+			(uuid "6a5cb686-9b6c-43c9-9276-58d9cbeb9d47")
 			(effects
 				(font
 					(size 1 1)

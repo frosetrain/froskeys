@@ -1,6 +1,8 @@
 # Froskeys
 
-![Render of Froskeys macropad](froskeys.png)
+![Photo of Froskeys macropad](irl.jpg)
+
+<iframe width="990" height="557" src="https://www.youtube.com/embed/2AYCUWPBNlQ" title="Froskeys Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 A 9-key macropad that I created for my own use-cases. I wanted some more keys next to my keyboard to do things like push-to-talk and other macros. Since my mouse is on the right of my laptop, my macropad shall sit on the left of my laptop.
 
@@ -10,13 +12,13 @@ There is a diagonal cutout on the bottom left, where I can rest my hand more eas
 
 ## Keys
 
--   Control+Z (undo) and Control+Y (redo)
--   Control+C (copy) and Control+V (paste), the only two keys I need
--   Control+D (duplicate)
--   F2 (rename)
--   Play/pause
--   Push-to-talk
--   `sudo pacman -Syu` (average arch user)
+- Control+Z (undo) and Control+Y (redo)
+- Control+C (copy) and Control+V (paste), the only two keys I need
+- Control+D (duplicate)
+- F2 (rename)
+- Play/pause
+- Push-to-talk
+- `fastfetch`
 
 ## Schematic
 
@@ -32,6 +34,10 @@ There is a diagonal cutout on the bottom left, where I can rest my hand more eas
 | --------------------------- | --------------------------------- |
 | ![Top of case](casetop.png) | ![Bottom of case](casebottom.png) |
 
+**CAD render**
+
+![Render of Froskeys macropad](render.png)
+
 Section analysis was a very useful feature
 
 ![Section analysis](section.png)
@@ -40,20 +46,20 @@ Section analysis was a very useful feature
 
 ### JLCPCB
 
--   PCB
+- PCB
 
-### Automatica’s 3D Printer
+### 3D Printed
 
--   Case
+- Case
 
-### Aliexpress (S$21.25)
+### Components
 
--   1 × Seeed Studio XIAO RP2040
--   9 × 1N4148 Diode
--   1 × EC11 Rotary Encoder
--   1 × 0.91″ I²C OLED Display
--   9 × White XDA Profile PBT Keycaps
--   9 × SK6812 MINI-E LED
--   4 × M3×16mm screw
--   4 × M3×5mm×4mm heatset insert
--   9 × Gateron Baby Kangaroo 2.0
+- 1 × Seeed Studio XIAO RP2040
+- 9 × 1N4148 Diode
+- 1 × EC11 Rotary Encoder
+- 1 × 0.91″ I²C OLED Display
+- 9 × White XDA Profile PBT Keycaps
+- 9 × SK6812 MINI-E LED
+- 4 × M3×16mm screw
+- 4 × M3×5mm×4mm heatset insert
+- 9 × Gateron Baby Kangaroo 2.0
