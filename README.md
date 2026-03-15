@@ -2,7 +2,7 @@
 
 ![Photo of Froskeys macropad](irl.jpg)
 
-<iframe width="990" height="557" src="https://www.youtube.com/embed/2AYCUWPBNlQ" title="Froskeys Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Demo video](https://www.youtube.com/watch?v=2AYCUWPBNlQ)
 
 A 9-key macropad that I created for my own use-cases. I wanted some more keys next to my keyboard to do things like push-to-talk and other macros. Since my mouse is on the right of my laptop, my macropad shall sit on the left of my laptop.
 
